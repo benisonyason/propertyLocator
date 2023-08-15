@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Locator</title>
+
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-1">
+        <div class="sidebar">
+          <h2>Asset Locator/Navigator</h2>
+          <input type="radio" name="baseLayerRadioButton" value="OSMMap1" >Empty Layer<br>
+          <input type="radio" name="baseLayerRadioButton" value="OSMMap2" checked>OSM BaseMap<br>
+          <p>This is a simple Property and Asset locator map with basic features</p><br>
+          <li>Basic Point Layer Styling</li>
+          <li>Popup info on click</li><br>
+          <i>Click on the red features to show popup. More features comming soon</i><br>
+          <b>Credit: Gridhall Limited</b>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div id="map" class="map"></div>
+      </div>
+    </div>
+
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-name"></div>
+      <div id="popup-area"></div>
+      <div id="popup-state"></div>
+      <div id="popup-lat"></div>
+      <div id="popup-lon"></div>
+      <div id="popup-status"></div>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <script src="./data/vector/vectordata.geojson"></script>
+  </body>
+</html>
